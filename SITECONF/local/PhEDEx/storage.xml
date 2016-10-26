@@ -1,0 +1,39 @@
+<storage-mapping>
+
+  <!-- Map any LFN with /store/ to xrootd on EOS -->
+  <lfn-to-pfn protocol="ibeos"
+    path-match="/+store/(.*)"
+    result="root://eoscms.cern.ch//eos/cms/store/user/cmsbuild/store/$1"/>
+
+  <!-- Map special HammerCloud dataset for Middleware Readiness testing to EOSPPS -->
+  <lfn-to-pfn protocol="eos"
+    path-match="/+store/mc/HCtest/GenericTTbar/GEN-SIM-RECO/CMSSW_7_0_4_START70_V7-v1/(.*)"
+    result="root://eospps.cern.ch//eos/pps/mw-test/phedex/store/mc/HCtest/GenericTTbar/GEN-SIM-RECO/CMSSW_7_0_4_START70_V7-v1/$1"/>
+
+  <!-- Map any LFN with /store/ to xrootd on EOS -->
+  <lfn-to-pfn protocol="eos"
+    path-match="/+store/(.*)"
+    result="root://eoscms.cern.ch//eos/cms/store/$1"/>
+
+  <!-- Xrootd fallback rules -->
+  <lfn-to-pfn protocol="xrootd" destination-match=".*"
+    path-match="/+store/(.*)"
+    result="root://xrootd-cms.infn.it//store/$1"/>
+
+  <!-- User and Group space rules -->
+  <lfn-to-pfn protocol="srmv2"
+    path-match="/+store/user/(.*)"
+    result="srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/$1"/>
+  <lfn-to-pfn protocol="srmv2"
+    path-match="/+store/group/(.*)"
+    result="srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/group/$1"/>
+
+  <!-- Reverse rules -->
+  <pfn-to-lfn protocol="eos"
+    path-match="root://eoscms.cern.ch//eos/cms/store/(.*)"
+    result="/store/$1"/>
+  <pfn-to-lfn protocol="srmv2"
+    path-match=".*\?SFN=/eos/cms(.*)"
+    result="$1"/>
+
+</storage-mapping>
