@@ -3,7 +3,7 @@
   <!-- Map any LFN with /store/ to xrootd on EOS -->
   <lfn-to-pfn protocol="ibeos"
     path-match="/+store/(.*)"
-    result="root://cms-xrd-global.cern.ch//eos/cms/store/user/cmsbuild/store/$1"/>
+    result="root://eoscms.cern.ch//eos/cms/store/user/cmsbuild/store/$1"/>
 
   <!-- Map special HammerCloud dataset for Middleware Readiness testing to EOSPPS -->
   <lfn-to-pfn protocol="eos"
@@ -13,7 +13,7 @@
   <!-- Map any LFN with /store/ to xrootd on EOS -->
   <lfn-to-pfn protocol="eos"
     path-match="/+store/(.*)"
-    result="root://cms-xrd-global.cern.ch//eos/cms/store/$1"/>
+    result="root://eoscms.cern.ch//eos/cms/store/$1"/>
 
   <!-- Xrootd fallback rules -->
   <lfn-to-pfn protocol="xrootd" destination-match=".*"
