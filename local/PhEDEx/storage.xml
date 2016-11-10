@@ -18,7 +18,7 @@
   <!-- Xrootd fallback rules -->
   <lfn-to-pfn protocol="xrootd" destination-match=".*"
     path-match="/+store/(.*)"
-    result="root://xrootd-cms.infn.it//store/$1"/>
+    result="root://cms-xrd-global.cern.ch//store/$1"/>
 
   <!-- User and Group space rules -->
   <lfn-to-pfn protocol="srmv2"
