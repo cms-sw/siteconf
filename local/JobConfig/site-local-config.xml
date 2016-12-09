@@ -2,7 +2,6 @@
 <site name="T2_CH_CERN">
    <event-data>
      <catalog url="trivialcatalog_file:/cvmfs/cms-ib.cern.ch/SITECONF/local/PhEDEx/storage.xml?protocol=ibeos"/>
-     <catalog url="trivialcatalog_file:/cvmfs/cms-ib.cern.ch/SITECONF/local/PhEDEx/storage.xml?protocol=eos"/>
      <catalog url="trivialcatalog_file:/cvmfs/cms-ib.cern.ch/SITECONF/local/PhEDEx/storage.xml?protocol=xrootd"/>
    </event-data>
    <source-config>
