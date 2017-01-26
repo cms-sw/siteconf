@@ -16,7 +16,7 @@
    </local-stage-out>
    <calib-data>
      <frontier-connect>
-       <proxyconfig url="http://cmst0frontier.cern.ch/t0.pac"/>
+       <proxyconfig url="http://grid-wpad/wpad.dat"/>
        <backupproxy url="http://cmst0frontier.cern.ch:3128"/>
        <backupproxy url="http://cmst0frontier1.cern.ch:3128"/>
        <backupproxy url="http://cmst0frontier2.cern.ch:3128"/>
@@ -30,6 +30,7 @@
        <server url="http://cmsfrontier3.cern.ch:8000/FrontierInt"/>
        <server url="http://cmsfrontier4.cern.ch:8000/FrontierInt"/>
      </frontier-connect>
+     <catalog url=""/>
      <catalog url=""/>
    </calib-data>
 </site>
