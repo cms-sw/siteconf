@@ -31,7 +31,6 @@
        <server url="http://cmsfrontier4.cern.ch:8000/FrontierInt"/>
      </frontier-connect>
      <catalog url=""/>
-     <catalog url=""/>
    </calib-data>
 </site>
 </site-local-config>
