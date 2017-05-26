@@ -16,6 +16,7 @@
    </local-stage-out>
    <calib-data>
      <frontier-connect>
+       <prefer ipfamily="0"/>
        <proxyconfig url="http://grid-wpad/wpad.dat"/>
        <backupproxy url="http://cmst0frontier.cern.ch:3128"/>
        <backupproxy url="http://cmst0frontier1.cern.ch:3128"/>
