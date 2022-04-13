@@ -1,14 +1,14 @@
 <storage-mapping>
 
-  <!-- Map any LFN with /store/ to xrootd on EOS -->
-  <lfn-to-pfn protocol="ibeos"
-    path-match="/+store/(.*)"
-    result="root://eoscms.cern.ch//eos/cms/store/user/cmsbuild/store/$1"/>
-
   <!-- Map special HammerCloud dataset for Middleware Readiness testing to EOSPPS -->
   <lfn-to-pfn protocol="eos"
     path-match="/+store/mc/HCtest/GenericTTbar/GEN-SIM-RECO/CMSSW_7_0_4_START70_V7-v1/(.*)"
     result="root://eospps.cern.ch//eos/pps/mw-test/phedex/store/mc/HCtest/GenericTTbar/GEN-SIM-RECO/CMSSW_7_0_4_START70_V7-v1/$1"/>
+
+  <!-- Map any LFN with /store/ to xrootd on EOS -->
+  <lfn-to-pfn protocol="ibeos"
+    path-match="/+store/(.*)"
+    result="root://eoscms.cern.ch//eos/cms/store/user/cmsbuild/store/$1"/>
 
   <!-- Map any LFN with /store/ to xrootd on EOS -->
   <lfn-to-pfn protocol="eos"
