@@ -1,0 +1,57 @@
+[
+   {  "site": "T1_IT_CNAF",
+      "volume": "CNAF_GPFS",
+      "protocols": [
+         {  "protocol": "xrootd-module",
+            "access": "virtual",
+            "comment": "path translations for CMS xrootd module",
+            "prefix": "/storage/gpfs_tsm_cms/cms/disk"
+         },
+         {  "protocol": "file",
+            "access": "site-ro",
+            "prefix": "file:/storage/gpfs_tsm_cms/cms/disk"
+         },
+         {  "protocol": "SRMv2",
+            "access": "global-rw",
+            "prefix": "srm://storm-fe-cms.cr.cnaf.infn.it:8444/srm/managerv2?SFN=/cmsdisk"
+         },
+         {  "protocol": "XRootD",
+            "access": "global-ro",
+            "prefix": "root://xrootd-cms.infn.it:1194/"
+         },
+         {  "protocol": "WebDAV",
+            "access": "global-rw",
+            "prefix": "davs://xfer-cms.cr.cnaf.infn.it:8443/cmsdisk"
+         }
+      ],
+      "type": "DISK",
+      "rse": "T1_IT_CNAF_Disk",
+      "fts": [ "https://fts3-cms.cern.ch:8446", "https://lcgfts3.gridpp.rl.ac.uk:8446" ]
+   },
+ 
+   {  "site": "T1_IT_CNAF",
+      "volume": "CNAF_MSS",
+      "protocols": [
+         {  "protocol": "SRMv2",
+            "access": "global-rw",
+            "prefix": "srm://storm-fe-cms.cr.cnaf.infn.it:8444/srm/managerv2?SFN=/cmstape"
+         }
+      ],
+      "type": "TAPE",
+      "rse": "T1_IT_CNAF_Tape",
+      "fts": [ "https://fts3-cms.cern.ch:8446", "https://lcgfts3.gridpp.rl.ac.uk:8446" ]
+   },
+
+   {  "site": "T1_IT_CNAF",
+      "volume": "Eurasian_Federation",
+      "protocols": [
+         {  "protocol": "XRootD",
+            "access": "global-ro",
+            "prefix": "root://xrootd-cms.infn.it/"
+         }
+      ],
+      "type": "DISK",
+      "rse": null,
+      "fts": []
+   }
+]

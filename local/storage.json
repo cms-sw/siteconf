@@ -18,5 +18,25 @@
         "type": "DISK",
         "rse": "T2_CH_CERN",
         "fts": [ "https://fts3-cms.cern.ch:8446", "https://lcgfts3.gridpp.rl.ac.uk:8446" ]
+    },
+    {   "site": "T2_CH_CERN",
+        "volume": "CERN_IBEOS",
+        "protocols": [
+            {   "protocol": "SRMv2",
+                "access": "global-rw",
+                "prefix": "gsiftp://eoscmsftp.cern.ch/eos/cms/store/user/cmsbuild"
+            },
+            {   "protocol": "XRootD",
+                "access": "global-rw",
+                "prefix": "root://eoscms.cern.ch//eos/cms/store/user/cmsbuild"
+            },
+            {   "protocol": "WebDAV",
+                "access": "global-rw",
+                "prefix": "davs://eoscms.cern.ch:443/eos/cms/store/user/cmsbuild"
+            }
+        ],
+        "type": "DISK",
+        "rse": null,
+        "fts": []
     }
 ]

@@ -1,8 +1,10 @@
 <site-local-config>
 <site name="T2_CH_CERN">
+<subsite name="TEST_SUBSITE"/>
    <event-data>
      <catalog url="trivialcatalog_file:/cvmfs/cms-ib.cern.ch/SITECONF/local/PhEDEx/storage.xml?protocol=ibeos"/>
-     <catalog url="trivialcatalog_file:/cvmfs/cms-ib.cern.ch/SITECONF/local/PhEDEx/storage.xml?protocol=xrootd"/>
+     <catalog url="trivialcatalog_file:/cvmfs/cms.cern.ch/SITECONF/T2_CH_CERN/PhEDEx/storage.xml?protocol=eos"/>
+     <catalog url="trivialcatalog_file:/cvmfs/cms.cern.ch/SITECONF/T2_CH_CERN/PhEDEx/storage.xml?protocol=xrootd"/>
    </event-data>
    <data-access>
      <catalog volume="CERN_IBEOS" protocol="XRootD"/>
@@ -41,5 +43,6 @@
      </frontier-connect>
      <catalog url=""/>
    </calib-data>
+</subsite>
 </site>
 </site-local-config>
