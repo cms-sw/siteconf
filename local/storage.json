@@ -8,7 +8,7 @@
             },
             {   "protocol": "XRootD",
                 "access": "global-rw",
-                "prefix": "root://eoscms.cern.ch//eos/cms"
+                "prefix": "root://cms-xrd-global.cern.ch//eos/cms"
             },
             {   "protocol": "WebDAV",
                 "access": "global-rw",
