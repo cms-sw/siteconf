@@ -1,0 +1,49 @@
+<!-- Site-local-conf for T2_FI_HIP CE:s -->
+
+<site-local-config>
+ <site name="T2_FI_HIP">
+
+    <event-data>
+      <catalog url="trivialcatalog_file:///cvmfs/cms.cern.ch/SITECONF/T2_FI_HIP/PhEDEx/storage.xml?protocol=root"/>
+      <catalog url="trivialcatalog_file:///cvmfs/cms.cern.ch/SITECONF/T2_FI_HIP/PhEDEx/storage.xml?protocol=xrootd"/>
+    </event-data>
+    <data-access>
+      <catalog volume="HIP_dCache" protocol="XRootD"/>
+      <catalog site="T1_IT_CNAF" volume="Eurasian_Federation" protocol="XRootD"/>
+    </data-access>
+    <local-stage-out>
+      <command value="gfal2"/>
+      <catalog url="trivialcatalog_file:///cvmfs/cms.cern.ch/SITECONF/T2_FI_HIP/PhEDEx/storage.xml?protocol=davs"/>
+      <se-name value="hip-cms-se.csc.fi"/>
+      <phedex-node value="T2_FI_HIP"/>
+    </local-stage-out>
+
+<!-- Add local fallback stageout here -->
+    <stage-out>
+      <method volume="HIP_dCache" protocol="WebDAV"/>
+    </stage-out>
+
+    <calib-data>
+      <frontier-connect>
+<!-- Add local Squid server here -->
+	<proxy url="http://frontier-vm.hip.helsinki.fi:3128"/>
+        <server url="http://cmsfrontier.cern.ch:8000/FrontierInt"/>
+        <server url="http://cmsfrontier1.cern.ch:8000/FrontierInt"/>
+        <server url="http://cmsfrontier2.cern.ch:8000/FrontierInt"/>
+        <server url="http://cmsfrontier3.cern.ch:8000/FrontierInt"/>
+        <backupproxy url="http://cmsbpfrontier.cern.ch:3128"/>
+        <backupproxy url="http://cmsbproxy.fnal.gov:3128"/>
+      </frontier-connect>
+    </calib-data>
+
+    <source-config>
+      <statistics-destination name="cms-udpmon-collector.cern.ch:9331" />
+      <ttree-cache-size value="20000000"/>
+      <cache-temp-dir name=".:$TMPDIR"/>
+      <cache-min-free value="10"/>
+      <cache-hint value="application-only"/>
+      <read-hint value="auto-detect"/>
+    </source-config>
+
+ </site>
+ </site-local-config>

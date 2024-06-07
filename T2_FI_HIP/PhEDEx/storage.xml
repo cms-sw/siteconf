@@ -1,0 +1,21 @@
+<!-- storage.xml for WAN access to dCache -->
+
+<storage-mapping>
+
+  <lfn-to-pfn protocol="davs"
+       path-match="/+store/(.*)" result="davs://hip-cms-se.csc.fi:2880/store/$1"/>
+  <pfn-to-lfn protocol="davs"
+       path-match="davs://hip-cms-se.csc.fi:2880/store/(.*)" result="/store/$1"/>
+
+<!-- Xrootd federation rule -->
+  <lfn-to-pfn protocol="root" destination-match=".*"
+        path-match="/+store/test/xrootd/T2_FI_HIP/(.*)" result="root://hip-cms-se.csc.fi:1094/$1"/>
+  <lfn-to-pfn protocol="root"
+	path-match="/+store/(.*)" result="root://hip-cms-se.csc.fi:1094//store/$1"/>
+  <pfn-to-lfn protocol="root"
+	path-match="root://hip-cms-se.csc.fi:1094//store/(.*)" result="/store/$1"/>
+
+  <!-- Xrootd fallback rules -->
+  <lfn-to-pfn protocol="xrootd" destination-match=".*" path-match="/+store/(.*)" result="root://xrootd-cms.infn.it//store/$1"/>
+  
+</storage-mapping>

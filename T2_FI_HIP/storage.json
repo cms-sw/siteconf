@@ -1,0 +1,20 @@
+[
+   {  "site": "T2_FI_HIP",
+      "volume": "HIP_dCache",
+      "protocols": [
+         {  "protocol": "XRootD",
+            "access": "global-rw",
+            "prefix": "root://hip-cms-se.csc.fi:1094/"
+         },
+         {  "protocol": "WebDAV",
+            "access": "global-rw",
+            "prefix": "davs://hip-cms-se.csc.fi:2880/"
+         }
+      ],
+      "type": "DISK",
+      "rse": "T2_FI_HIP",
+      "fts": [ "https://fts3-cms.cern.ch:8446", "https://lcgfts3.gridpp.rl.ac.uk:8446" ],
+      "loadtest": true
+   }
+]
+ 
