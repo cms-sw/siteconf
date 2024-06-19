@@ -16,5 +16,22 @@
       "fts": [ "https://fts3-cms.cern.ch:8446", "https://lcgfts3.gridpp.rl.ac.uk:8446" ],
       "loadtest": true
    }
+   {  "site": "T2_FI_HIP",
+      "volume": "CERN_IBEOS",
+      "protocols": [
+         {  "protocol": "XRootD",
+            "access": "global-rw",
+            "prefix": "root://eoscms.cern.ch//eos/cms/store/user/cmsbuild"
+         },
+         {  "protocol": "WebDAV",
+            "access": "global-rw",
+            "prefix": "davs://eoscms.cern.ch:443/eos/cms/store/user/cmsbuild"
+         }
+      ],
+      "type": "DISK",
+      "rse": "T2_FI_HIP",
+      "fts": [ "https://fts3-cms.cern.ch:8446", "https://lcgfts3.gridpp.rl.ac.uk:8446" ],
+      "loadtest": true
+   }
 ]
  

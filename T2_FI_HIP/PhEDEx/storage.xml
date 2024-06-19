@@ -2,6 +2,12 @@
 
 <storage-mapping>
 
+
+  <!-- Map any LFN with /store/ to xrootd on EOS -->
+  <lfn-to-pfn protocol="ibeos"
+    path-match="/+store/(.*)"
+    result="root://eoscms.cern.ch//eos/cms/store/user/cmsbuild/store/$1"/>
+
   <lfn-to-pfn protocol="davs"
        path-match="/+store/(.*)" result="davs://hip-cms-se.csc.fi:2880/store/$1"/>
   <pfn-to-lfn protocol="davs"

@@ -4,10 +4,12 @@
  <site name="T2_FI_HIP">
 
     <event-data>
+      <catalog url="trivialcatalog_file:///cvmfs/cms-ib.cern.ch/SITECONF/T2_FI_HIP/PhEDEx/storage.xml?protocol=ibeos"/>
       <catalog url="trivialcatalog_file:///cvmfs/cms.cern.ch/SITECONF/T2_FI_HIP/PhEDEx/storage.xml?protocol=root"/>
       <catalog url="trivialcatalog_file:///cvmfs/cms.cern.ch/SITECONF/T2_FI_HIP/PhEDEx/storage.xml?protocol=xrootd"/>
     </event-data>
     <data-access>
+      <catalog volume="CERN_IBEOS" protocol="XRootD"/>
       <catalog volume="HIP_dCache" protocol="XRootD"/>
       <catalog site="T1_IT_CNAF" volume="Eurasian_Federation" protocol="XRootD"/>
     </data-access>
